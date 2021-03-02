@@ -1,0 +1,13 @@
+<h2>LIST NOTE</h2>
+
+<div *ngFor="let note of notes; let i = index">
+	<div *ngIf="note.favorite == false; then show else clear"></div>
+	<ng-template #show>
+		{{i+1}}. {{note.judul}} - {{note.tanggal}} <button (click)="favorite(note.no)">FAV</button><br/>
+      {{note.isi}}<br/><br/>
+    </ng-template>
+		<ng-template #clear>
+			{{i+1}}. {{note.judul}} - {{note.tanggal}}<br/>
+      {{note.isi}}<br/><br/>
+    </ng-template>
+</div>

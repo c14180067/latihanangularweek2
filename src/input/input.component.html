@@ -1,0 +1,11 @@
+<h2>INPUT NOTE</h2>
+
+<table>
+	<tr>Judul:</tr>
+	<input type="text" [(ngModel)]="judul">
+	<tr>Isi:</tr>
+	<textarea [(ngModel)]="isi" required=true></textarea>
+	<tr>Tanggal:</tr>
+	{{ tanggal }}
+</table><br/>
+<button (click)="save()">Save Note</button>
